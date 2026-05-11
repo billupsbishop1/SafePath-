@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SafePath Results</title>
+    <title>SafePath</title>
 </head>
 <body>
-    <h1>Route Comparison</h1>
+    <h1>SafePath</h1>
 
-    <p><strong>Starting Location:</strong> {{ start_location }}</p>
-    <p><strong>Destination:</strong> {{ destination }}</p>
+    <p>Compare safer and faster travel routes before you go.</p>
 
-    <h2>Safest Route</h2>
-    <p>{{ safest_route }}</p>
+    <form action="/route" method="POST">
+        <label for="start_location">Starting Location:</label><br>
+        <input type="text" id="start_location" name="start_location" placeholder="Example: Kennesaw State University" required>
 
-    <h2>Fastest Route</h2>
-    <p>{{ fastest_route }}</p>
+        <br><br>
 
-    <h2>Recommended Route</h2>
-    <p>{{ recommended_route }}</p>
+        <label for="destination">Destination:</label><br>
+        <input type="text" id="destination" name="destination" placeholder="Example: Atlanta, GA" required>
 
-    <p><em>These are placeholder results for the current version of the project.</em></p>
+        <br><br>
 
-    <a href="/">Compare another route</a>
+        <button type="submit">Compare Routes</button>
+    </form>
 </body>
 </html>
